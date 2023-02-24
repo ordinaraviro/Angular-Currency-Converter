@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="number"] {
+    width: 100px;
+    margin-right: 10px;
+    padding: 5px;
+  }
+  
+  select {
+    padding: 5px;
+  }
+  
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
