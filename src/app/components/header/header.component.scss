@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    &__title {
+        font-style: italic;
+    }
+    &__rates {
+        display: flex;
+        gap: 20px;
+        font-style: italic;
+    }
+}

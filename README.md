@@ -1,7 +1,11 @@
-# CcApp
+# Currency Converter App
 
 Trying to make a simple currency converter using Angular.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+
+## Deploy
+
+https://ordinaraviro.github.io/Angular-Currency-Converter/
 
 ## Development server
 

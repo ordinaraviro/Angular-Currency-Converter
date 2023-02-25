@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Component, Input, OnInit } from '@angular/core';
+// import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-header',
@@ -7,25 +7,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  public usdRate: number | undefined;
-  public eurRate: number | undefined;
-
-  constructor(private http: HttpClient) { }
+  @Input() public usdRate: number | undefined;
+  @Input() public eurRate: number | undefined;
+  @Input() public title: string | undefined;
 
   ngOnInit(): void {
-    this.getExchangeRates();
   }
-
-  private getExchangeRates(): void {
-    const headers = new HttpHeaders({
-      'apikey': 'Tc7nsjUCyV66aVeWmW3QxBq6VIcryero'
-    });
-
-    this.http.get<any>('https://api.apilayer.com/exchangerates_data/latest?symbols=USD,EUR&base=UAH', { headers })
-      .subscribe(data => {
-        this.usdRate = data.rates.USD;
-        this.eurRate = data.rates.EUR;
-      });
-  }
-
 }
