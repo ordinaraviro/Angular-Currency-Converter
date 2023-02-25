@@ -1,18 +1,19 @@
 <div class="converter">
   <div class="converter__item">
-    <input class="converter__input" type="number" [value]="usdRate"/>
-    <select class="converter__select">
+    <input class="converter__input" type="number" [(ngModel)]="input1" (input)="onInputChange(1)"/>
+    <select class="converter__select" [(ngModel)]="rate1" (change)="onInputChange(1)">
       <option value="UAH">UAH</option>
       <option value="USD">USD</option>
       <option value="EUR">EUR</option>
     </select>
   </div>
   <div class="converter__item">
-      <input class="converter__input" type="number" [value]="eurRate"/>
-      <select class="converter__select">
-        <option value="UAH">UAH</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-      </select>
+    <input class="converter__input" type="number" [(ngModel)]="input2" (input)="onInputChange(2)"/>
+    <select class="converter__select" [(ngModel)]="rate2" (change)="onInputChange(2)">
+      <option value="UAH">UAH</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select>
   </div>
 </div>
+
