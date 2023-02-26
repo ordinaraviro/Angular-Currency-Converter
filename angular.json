@@ -30,8 +30,8 @@
               "src/assets",
               {
                 "glob": "**/*",
-                "input": "src/assets/images",
-                "output": "/assets/images"
+                "input": "src/assets",
+                "output": "/assets"
               }
             ],
             "styles": [
