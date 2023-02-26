@@ -1,0 +1,22 @@
+<div class="converter">
+  <div class="converter__item">
+    <input class="converter__input" type="number" [(ngModel)]="input1" (input)="onInputChange(1)"/>
+    <ng-select class="converter__select" [(ngModel)]="rate1" (change)="onInputChange(2)" [searchable]="false" [clearable]="false">
+      <ng-option *ngFor="let rate of currencies" [value]="rate.value">
+        <img src="{{ rate.imgSrc }}" alt="{{ rate.label }}" class="state-flag" />
+        {{ rate.label }}
+      </ng-option>
+    </ng-select>
+  </div>
+  <div class="converter__img"></div>
+  <div class="converter__item">
+    <input class="converter__input" type="number" [(ngModel)]="input2" (input)="onInputChange(2)"/>
+    <ng-select class="converter__select" [(ngModel)]="rate2" (change)="onInputChange(1)" [searchable]="false" [clearable]="false">
+      <ng-option *ngFor="let rate of currencies" [value]="rate.value">
+        <img src="{{ rate.imgSrc }}" alt="{{ rate.label }}" class="state-flag" />
+        {{ rate.label }}
+      </ng-option>
+    </ng-select>
+  </div>
+</div>
+
