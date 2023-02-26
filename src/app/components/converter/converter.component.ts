@@ -14,9 +14,9 @@ export class ConverterComponent {
   rate2 = 'USD';
 
   public currencies = [
-    { value: 'UAH', label: 'UAH', imgSrc: '/assets/ukraine.png' },
-    { value: 'USD', label: 'USD', imgSrc: '/assets/united-states.png' },
-    { value: 'EUR', label: 'EUR', imgSrc: '/assets/european-union.png' }
+    { value: 'UAH', label: 'UAH', imgSrc: './assets/ukraine.png' },
+    { value: 'USD', label: 'USD', imgSrc: './assets/united-states.png' },
+    { value: 'EUR', label: 'EUR', imgSrc: './assets/european-union.png' }
   ];
 
   rateObj: Record<string, number> = {};
