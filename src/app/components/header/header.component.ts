@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-// import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-header',

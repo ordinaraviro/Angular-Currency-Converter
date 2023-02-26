@@ -19,11 +19,11 @@ export class AppComponent implements OnInit{
 
   private getExchangeRates(): void {
     const headers = new HttpHeaders({
-      'apikey': 'Tc7nsjUCyV66aVeWmW3QxBq6VIcryero'
+      'apikey': 'qEEXDs0i6AALMfTkqW35ZfXVEMmS4dLQ'
     });
 
     this.http.get<any>('https://api.apilayer.com/exchangerates_data/latest?symbols=USD,EUR&base=UAH', { headers })
-      .subscribe(data => {
+      .subscribe((data: { rates: { USD: number, EUR: number } }) => {
         this.usdRate = data.rates.USD;
         this.eurRate = data.rates.EUR;
       });

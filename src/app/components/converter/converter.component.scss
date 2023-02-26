@@ -1,7 +1,47 @@
 .converter {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 5px;
   max-width: 1000px;
-  margin: auto;
-  padding: 20px;
+  margin: 60px auto auto;
+  @media (max-width: 865px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    border-radius: 6px;
+    box-shadow: 0 0px 10px #000000;
+    padding: 0;
+    background: rgba($color: #ffffff, $alpha: .9);
+  }
+  &__input {
+    all: unset;
+    text-align: center;
+    height: 40px;
+    width: 200px;
+    border-right: 1px solid #aaaaaa;
+    border-radius: 6px;
+  }
+  &__input:focus {
+    background: rgba($color: #cccccc, $alpha: .9);
+  }
+  &__select {
+    width: 200px;
+    height: 40px;
+  }
+  &__img {
+    height: 40px;
+    width: 40px;
+    background-image: url("../../../favicon.ico");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.state-flag {
+  width: 30px;
 }
